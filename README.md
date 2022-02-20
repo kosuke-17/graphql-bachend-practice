@@ -35,4 +35,6 @@ index.js
 packade.json
 ```
 
-- index.js
+## パッケージインストール
+
+`npm i express apollo-server-express graphql @graphql-tools/schema dotenv`
