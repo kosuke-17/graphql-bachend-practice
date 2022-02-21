@@ -1,2 +1,2 @@
-export { default as authorMutations } from "./mutations";
-export { default as authorQueries } from "./queries";
+export { default as bookMutations } from "./mutations";
+export { default as bookQueries } from "./queries";

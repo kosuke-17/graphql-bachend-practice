@@ -1,6 +1,6 @@
 const bookQueries = {
   books: async (_, args) => {},
-  bokk: async (_, args) => {},
+  book: async (_, args) => {},
 };
 
 export default bookQueries;

@@ -1,7 +1,13 @@
 import { port } from "./config/environment";
-import app from "./app";
+import express from "express";
+import apolloServer from "./graphql";
 
 const start = async () => {
+  const app = express();
+  await apolloServer.start();
+  apolloServer.applyMiddleware({
+    app,
+  });
   try {
     await app.listen(port);
     console.log(`🚀  GraphQL server running at port: ${port}`);

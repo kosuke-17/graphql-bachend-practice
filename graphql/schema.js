@@ -1,6 +1,7 @@
 import { join } from "path";
 import { readdirSync, readFileSync } from "fs";
 import { makeExecutableSchema } from "@graphql-tools/schema";
+import resolvers from "./resolvers";
 
 // 指定したディレクトリ以下のファイルを出力
 // readdirSyncの説明 : https://www.gesource.jp/weblog/?p=8215
@@ -18,7 +19,7 @@ gqlFiles.forEach((file) => {
 // スキーマを作成
 const schema = makeExecutableSchema({
   typeDefs,
-  // resolvers pending...
+  resolvers,
 });
 
 export default schema;
