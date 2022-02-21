@@ -1,0 +1,30 @@
+# カスタムスカラー
+scalar Date
+
+type Query {
+  # 本情報
+  books: [Book]!
+  book(id: ID!): Book
+
+  # 著者情報
+  authors: [Author]!
+  author(id: ID!): Author
+
+  # 出版社情報
+  publishers: [Publisher]!
+  publisher(id: ID!): Publisher
+}
+
+type Mutation {
+  # 本情報(追加・更新)
+  createBook(book: BookCreateInput!): Book!
+  updateBook(id: ID!, book: BookUpdateInput!): Book!
+
+  # 著者情報(追加・更新)
+  createAuthor(author: AuthorCreateInput!): Author!
+  updateAuthor(id: ID!, author: AuthorUpdateInput!): Author!
+
+  # 出版社情報(追加・更新)
+  createPublisher(publisher: PublisherCreateInput!): Publisher!
+  updatePublisher(id: ID!, publisher: PublisherUpdateInput!): Publisher!
+}

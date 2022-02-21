@@ -1,0 +1,19 @@
+# 出版社
+type Publisher implements Timestamps {
+  id: ID!
+  name: String!
+  authors: [Author]
+
+  # 必須
+  createdAt: Date!
+  updatedAt: Date!
+}
+
+# 出版社情報(追加)
+input PublisherCreateInput {
+  name: String!
+}
+# 出版社情報(更新)
+input PublisherUpdateInput {
+  name: String
+}

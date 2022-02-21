@@ -1,0 +1,19 @@
+# 著者
+type Author implements Timestamps {
+  id: ID!
+  name: String!
+  publishers: [Publisher]
+
+  # 必須
+  createdAt: Date!
+  updatedAt: Date!
+}
+
+# 著者名(追加)
+input AuthorCreateInput {
+  name: String!
+}
+# 著者名(更新)
+input AuthorUpdateInput {
+  name: String
+}

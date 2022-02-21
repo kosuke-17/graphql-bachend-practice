@@ -1,0 +1,20 @@
+# 本
+type Book implements Timestamps {
+  id: ID!
+  name: String!
+  author: Author!
+
+  # 必須
+  createdAt: Date!
+  updatedAt: Date!
+}
+
+# 本情報(追加)
+input BookCreateInput {
+  name: String!
+  author: ID!
+}
+# 本情報(更新)
+input BookUpdateInput {
+  name: String
+}
